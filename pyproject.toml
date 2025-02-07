@@ -10,6 +10,11 @@ python = "^3.11"
 django = "^5.1.6"
 
 
+[tool.poetry.group.lint.dependencies]
+pre-commit = "^4.1.0"
+ruff = "^0.9.5"
+black = "^25.1.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
