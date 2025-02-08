@@ -13,4 +13,4 @@ RUN poetry install
 
 COPY api/ /app/
 
-CMD ["poetry", "run", "python", "manage.py", "runserver"]
+CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
