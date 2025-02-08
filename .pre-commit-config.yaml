@@ -6,12 +6,12 @@ repos:
         entry: black
         language: system
         types: [ python ]
-        files: ^bot/.*\.py$
+        files: ^api/.*\.py$
         exclude: ^alembic/
       - id: ruff
         name: ruff
         entry: ruff check
         language: system
         types: [ python ]
-        files: ^bot/.*\.py$
+        files: ^api/.*\.py$
         exclude: ^alembic/
