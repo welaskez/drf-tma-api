@@ -9,10 +9,13 @@ RUN pip install poetry
 
 RUN poetry config virtualenvs.create false
 
-COPY ../pyproject.toml poetry.lock ./
+COPY pyproject.toml poetry.lock ./
 
 RUN poetry install
 
 COPY api .
+COPY scripts/entrypoint.sh /entrypoint.sh
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
