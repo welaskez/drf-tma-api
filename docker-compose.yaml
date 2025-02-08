@@ -1,3 +1,5 @@
+name: 'drf-tma-api'
+
 networks:
   app:
 
